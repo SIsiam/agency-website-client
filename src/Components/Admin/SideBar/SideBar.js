@@ -12,7 +12,7 @@ const SideBar = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/admin?email=${loggedInUser.email}`)
+        fetch(`https://agency-website-server.herokuapp.com/admin?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

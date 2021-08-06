@@ -40,7 +40,7 @@ const Order = () => {
 
 
 
-        fetch('http://localhost:5000/placeOrder', {
+        fetch('https://agency-website-server.herokuapp.com/placeOrder', {
             method: 'POST',
             body: formData
         })
@@ -58,7 +58,7 @@ const Order = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${id}`)
+        fetch(`https://agency-website-server.herokuapp.com/order/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

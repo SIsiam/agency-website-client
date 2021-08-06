@@ -8,7 +8,7 @@ const Services = () => {
     document.title = "Photography Services - Service";
 
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://agency-website-server.herokuapp.com/allServices')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

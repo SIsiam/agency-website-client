@@ -14,7 +14,7 @@ const ManageService = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://agency-website-server.herokuapp.com/allServices')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -25,7 +25,7 @@ const ManageService = () => {
 
     const deleteService = (_id) => {
         console.log(_id);
-        const URL = `http://localhost:5000/allServices/${_id}`
+        const URL = `https://agency-website-server.herokuapp.com/allServices/${_id}`
         console.log(URL);
         fetch(URL, {
             method: 'DELETE'

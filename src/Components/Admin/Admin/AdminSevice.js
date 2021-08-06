@@ -24,7 +24,7 @@ const AdminSevice = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/admin?email=${loggedInUser.email}`)
+        fetch(`https://agency-website-server.herokuapp.com/admin?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => {
 
@@ -43,7 +43,7 @@ const AdminSevice = () => {
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${id}`)
+        fetch(`https://agency-website-server.herokuapp.com/order/${id}`)
             .then(res => res.json())
             .then(data => setNewOrder(data))
     }, [])
@@ -52,7 +52,7 @@ const AdminSevice = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://agency-website-server.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 const normalStatus = data.map(statusData => ({ ...statusData, status: 'pending' }))
@@ -61,7 +61,7 @@ const AdminSevice = () => {
     }, [])
 
     const updates = (status) => {
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://agency-website-server.herokuapp.com/update/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(status)
@@ -69,14 +69,14 @@ const AdminSevice = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/admin?email=${loggedInUser.email}`)
+        fetch(`https://agency-website-server.herokuapp.com/admin?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data))
     }, [])
 
 
     const change = (e, id) => {
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://agency-website-server.herokuapp.com/update/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status: e.value })

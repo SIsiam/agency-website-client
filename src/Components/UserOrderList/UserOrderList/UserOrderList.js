@@ -10,7 +10,7 @@ const ServiceList = () => {
     const [userEmail, setUserEmail] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/specificOrder?email=${loggedInUser.email}`)
+        fetch(`https://agency-website-server.herokuapp.com/specificOrder?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
