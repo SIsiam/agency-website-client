@@ -1,0 +1,17 @@
+.userOrder-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    grid-gap: 5px;
+}
+
+@media all and (max-width: 480px) {
+    .my-order {
+        display: none;
+        }
+  
+  }
+  

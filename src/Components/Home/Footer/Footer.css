@@ -1,0 +1,26 @@
+.footer-area{
+    background: linear-gradient(60deg, #2B2E4A 0%, #2B2E4A 30%, #E84545 calc(30% + 1px), #E84545 60%, #903749 calc(60% + 1px), #903749 70%, #53354A calc(70% + 1px), #53354A 100%);
+    color:white;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.footer-area li{
+    padding-bottom: 10px;
+    color:white;
+}
+
+.social-media .icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #6ACECE;
+    color:black;
+    color:white;
+    padding: 10px;
+}
+.social-media .active-icon{
+    color:black;
+    color:white;
+
+}
